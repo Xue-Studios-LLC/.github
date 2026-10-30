@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://embed.oim.media/4CUbwN0A49hb.oim.png" alt="Xue Studios LLC" width="680" />
+  <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/xue-studios-banner.png" alt="Xue Studios LLC" width="680" />
 </p>
 
 # Xue Studios LLC
@@ -14,7 +14,7 @@ Object Interactive Media is an open container format that bridges visual raster 
 
 <p align="center">
   <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
-    <img src="https://embed.oim.media/G8jBVj7I8zi8.oim.png" alt="Object Interactive Media" width="680" />
+    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-hero-specimen.png" alt="Object Interactive Media" width="680" />
   </a>
 </p>
 
