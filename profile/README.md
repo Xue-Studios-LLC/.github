@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-architecture-specimen.png" alt="Object Interactive Media Architecture Specimen" width="680" />
-  </a>
+  <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/xue-studios-header.png" alt="Xue Studios LLC" width="680" />
 </p>
 
 # Xue Studios LLC
@@ -14,20 +12,20 @@ We are the creators and maintainers of **Object Interactive Media (OIM)**, an op
 
 ## Object Interactive Media (OIM Standard)
 
-Digital media has historically faced a rigid dichotomy: static raster images (PNG, JPEG, WebP) are portable but lack interactivity, accessibility, and localization; whereas interactive web applications require complex bundles, external stylesheets, and custom hosting.
+Digital media has historically faced a rigid dichotomy: static raster images (PNG, JPEG, WebP) are universally portable but lack interactivity, accessibility, and localization; whereas interactive web applications require complex bundles, external stylesheets, and custom hosting.
 
 The **OIM Standard** bridges this divide by embedding interactive DOM metadata directly inside standard PNG files:
 
 1. **Universal Portability (Dual-State Degradation):** In standard operating environments such as GitHub, email clients, social platforms, and desktop operating systems, an `.oim.png` file renders natively as a standard 32-bit PNG image with zero compatibility errors.
 2. **Dynamic Runtime Activation:** In web runtimes, documentation frameworks, and modern blogs, the zero-dependency `<oim-player>` Custom Element parses the embedded metadata, promoting the image into an interactive, multilingual DOM surface with zero network latency.
-3. **Cryptographic Provenance:** Every production `.oim` artifact carries an ECDSA P-256 digital signature embedded within an RFC-compliant PNG `tEXt` chunk, validating author authenticity and preventing client-side tampering.
+3. **Cryptographic Provenance:** Every production `.oim` artifact carries an ECDSA P-256 digital signature embedded within an RFC-compliant PNG chunk (`tEXt` / `zTXt`), validating author authenticity and preventing client-side tampering.
 
 <p align="center">
   <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-runtime-translation.png" alt="Native Runtime Translation Specimen" width="680" />
+    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/hero-multilingual.oim.png" alt="Hero Multilingual Specimen (.oim.png)" width="680" />
   </a>
   <br />
-  <sub><b>Figure 1.0:</b> Native runtime translation and dynamic DOM layering in OIM. Zero network latency per language switch. Select image to open live ecosystem.</sub>
+  <sub><b>Figure 1.0:</b> Canonical multilingual hero specimen (<code>hero-multilingual.oim.png</code>). Encapsulates 7 languages (ES, EN, PT, FR, DE, IT, JA) and 19 interactive slots with zero-bandwidth runtime DOM switching. Select image to open live in player.</sub>
 </p>
 
 ---
@@ -43,8 +41,8 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 ```html
 <!-- Declarative embed with automated aspect ratio preservation -->
 <oim-player 
-  src="https://oim.media/oim-architecture-specimen.png" 
-  ratio="1.91/1"
+  src="https://oim.media/flyer_audifonos.oim.png" 
+  ratio="16/9"
   lang="en">
 </oim-player>
 ```
@@ -54,10 +52,25 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 In environments where client-side JavaScript execution is restricted by security sanitizers, OIM leverages standard image syntax with a direct hyperlink to the live viewer:
 
 ```markdown
-[![Interactive Visual Architecture](https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-architecture-specimen.png)](https://oim.media)
+[![Interactive Visual Architecture](https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/hero-multilingual.oim.png)](https://oim.media)
 ```
 
 This guarantees 100% visual uptime across every distribution channel while retaining instant access to interactive functionality.
+
+---
+
+## Binary Verification & Dynamic Data Integrity
+
+Every `.oim.png` artifact is verified against RFC-2083 PNG specifications and the OIM binary schema:
+
+```
+Payload Analysis: hero-multilingual.oim.png
+Chunk Identifier: zTXt (Keyword: OIM_Data, Compression: Deflate)
+Decompressed Size: 370,636 bytes (Valid JSON)
+Languages Declared: ["es", "en", "pt", "fr", "de", "it", "ja"]
+Interactive Slots: 19 structured vector & text slots
+Security Status: ECDSA P-256 signature chain validated
+```
 
 ---
 
@@ -65,7 +78,7 @@ This guarantees 100% visual uptime across every distribution channel while retai
 
 | Package / Module | Scope | Architecture & Capabilities | License |
 | :--- | :--- | :--- | :--- |
-| **`@oim/core`** | Binary Specification | PNG `tEXt` demuxer, raw Deflate extraction, Zod runtime validation, dynamic coordinate projection (`cqw`), and ECDSA verification. | Apache-2.0 |
+| **`@oim/core`** | Binary Specification | PNG `tEXt` / `zTXt` demuxer, Deflate extraction, Zod runtime validation, dynamic coordinate projection (`cqw`), and ECDSA verification. | Apache-2.0 |
 | **`@oim/player-oim`** | Web Component | Zero-dependency W3C Custom Element (`<oim-player>`). Instant DOM hydration, sub-millisecond language switching, and kinetic typography. | Apache-2.0 |
 | **`@oim/player-ovm`** | Video Runtime | Spatial-temporal interactive video engine with hot-spot branching and synchronized state actions. | Apache-2.0 |
 | **`OIM Studio`** | Authoring Suite | Multi-layer visual design studio with vector engines, parallax choreography, generative backgrounds, and asset packaging. | Proprietary |
