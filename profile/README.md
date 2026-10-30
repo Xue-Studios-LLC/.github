@@ -1,39 +1,100 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/xue-studios-banner.png" alt="Xue Studios LLC Social Banner" width="100%" />
+</p>
+
 # Xue Studios LLC
 
-Welcome to the official GitHub organization of **Xue Studios LLC**. We design, engineer, and build innovative software architectures, creative software, and open standards for the modern web.
+Xue Studios LLC designs, engineers, and builds high-performance software systems, interactive spatial media formats, and next-generation web runtimes.
+
+We are the creators and maintainers of **Object Interactive Media (OIM)**, an open container standard that decouples visual media from interactive, multilingual, and animated DOM layers.
 
 ---
 
-### 🚀 Active Initiatives & Projects
+## Object Interactive Media (OIM Standard)
 
-#### 🌐 Object Interactive Media (OIM Ecosystem)
-Our flagship interactive media system that decouples base media (raster images & video) from interactive, multilingual DOM layers.
-- **[OIM Media](https://oim.media)**: Main ecosystem platform and showcase.
-- **`@oim/core`**: Binary specification, metadata extraction (`PNG tEXt` / raw Deflate), schema validation, and coordinate compilers.
-- **`@oim/player-oim`**: Zero-dependency W3C custom element (`<oim-player>`) for instant rendering, accessibility, and zero-bandwidth runtime translation.
-- **`@oim/player-ovm`**: Interactive video runtime with spatial-temporal hotspots and branching stories.
+Digital media has historically faced a rigid dichotomy: static raster images (PNG, JPEG, WebP) are portable but lack interactivity, text accessibility, and localization; whereas interactive web applications require complex bundles, external stylesheets, and custom hosting.
 
-*(Additional technological initiatives, creative software, and experimental tooling will be introduced as our engineering roadmap unfolds.)*
+The **OIM Standard** bridges this divide by embedding interactive DOM metadata directly inside standard PNG files:
 
----
+1. **Universal Portability (Dual-State Degradation):** In standard operating environments such as GitHub, email clients, social platforms, and desktop operating systems, an `.oim.png` file renders natively as a standard 32-bit PNG image with zero compatibility errors.
+2. **Dynamic Runtime Activation:** In web runtimes, documentation frameworks, and modern blogs, the zero-dependency `<oim-player>` Custom Element parses the embedded metadata, promoting the image into an interactive, multilingual DOM surface with zero network latency.
+3. **Cryptographic Provenance:** Every production `.oim` artifact carries an ECDSA P-256 digital signature embedded within an RFC-compliant PNG `tEXt` chunk, validating author authenticity and preventing client-side tampering.
 
-### 🔒 Development Status & Roadmap
-
-> **Current Phase: Private Beta & Active Engineering**  
-> Repositories across Xue Studios LLC initiatives are currently undergoing closed testing, compliance reviews, and security hardening. Public releases and open-source packages will be published in this organization once our stability and governance milestones are concluded.
-
----
-
-### 📜 Licensing & Open Standards Philosophy
-
-Xue Studios LLC operates on a balanced model of open interoperability and robust proprietary products:
-- **Open Source**: Public specifications, core decoding libraries, and embeddable runtime players are released under permissive open-source licenses (such as Apache-2.0) to foster adoption and ecosystem interoperability.
-- **Commercial & Cloud**: Advanced authoring studios, managed Cloud pipelines, and enterprise backend services are developed and maintained as proprietary technology by Xue Studios LLC.
+<p align="center">
+  <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
+    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/interactive_specimen.oim.png" alt="Object Interactive Media Specimen (.oim.png)" width="85%" />
+  </a>
+  <br />
+  <sub><b>Figure 1.0:</b> Canonical Object Interactive Media container (<code>.oim.png</code>). Renders as high-fidelity PNG on GitHub; unlocks real-time multilingual DOM layers when mounted via <code>&lt;oim-player&gt;</code>. Select image to open live ecosystem.</sub>
+</p>
 
 ---
 
-### 🤝 Connect & Inquiries
+## Markdown & Document Integration Standard
 
-- 🌍 **Company Hub**: [xuestudios.com](https://xuestudios.com) · [oim.media](https://oim.media)
-- 💬 **Community Discord**: [Join Discord](https://discord.com/invite/FmawxUnF)
-- ✉️ **Inquiries & Partnerships**: [contact@xuestudios.com](mailto:contact@xuestudios.com) · [support@oim.media](mailto:support@oim.media)
+In content platforms, editorial engines, and technical documentation, OIM enables direct declarative embedding within Markdown pipelines.
+
+### Active Web Runtime (Blog, VitePress, Astro, Next.js)
+
+When loaded in web environments supporting Custom Elements, Markdown parsers render the interactive component natively:
+
+```html
+<!-- Declarative embed with automated aspect ratio preservation -->
+<oim-player 
+  src="https://oim.media/object_view.oim.png" 
+  ratio="16/9"
+  lang="es">
+</oim-player>
+```
+
+### Static Markdown Fallback (GitHub, GitLab, Readmes)
+
+In environments where client-side JavaScript execution is restricted by security sanitizers, OIM leverages standard image syntax with a direct hyperlink to the live viewer:
+
+```markdown
+[![Interactive Visual Architecture](https://oim.media/object_view.oim.png)](https://oim.media)
+```
+
+This guarantees 100% visual uptime across every distribution channel while retaining instant access to interactive functionality.
+
+---
+
+## Technology Stack & Module Matrix
+
+| Package / Module | Scope | Architecture & Capabilities | License |
+| :--- | :--- | :--- | :--- |
+| **`@oim/core`** | Binary Specification | PNG `tEXt` demuxer, raw Deflate extraction, Zod runtime validation, dynamic coordinate projection (`cqw`), and ECDSA verification. | Apache-2.0 |
+| **`@oim/player-oim`** | Web Component | Zero-dependency W3C Custom Element (`<oim-player>`). Instant DOM hydration, sub-millisecond language switching, and kinetic typography. | Apache-2.0 |
+| **`@oim/player-ovm`** | Video Runtime | Spatial-temporal interactive video engine with hot-spot branching and synchronized state actions. | Apache-2.0 |
+| **`OIM Studio`** | Authoring Suite | Multi-layer visual design studio with vector engines, parallax choreography, generative backgrounds, and asset packaging. | Proprietary |
+| **`OVM Studio`** | Interactive Timeline | Non-linear video editor with WebGL transition pipelines and dynamic layer anchoring. | Proprietary |
+
+---
+
+## Engineering Roadmap & Status
+
+### Phase: Private Beta & Active Hardening
+
+Engineering repositories across the Xue Studios LLC ecosystem are undergoing rigorous fuzz testing, conformance vector validation, and security auditing.
+
+- **Conformance Vectors:** Core validation against RFC-2083 PNG specifications and binary metadata contracts.
+- **Supply Chain Security:** Strict policy enforcement with automated script sandboxing, dependency auditing, and signed release commits.
+- **Public Packaging:** Open-source runtime libraries will be distributed to npm upon completion of initial release audits.
+
+---
+
+## Licensing Philosophy
+
+Xue Studios LLC maintains a balanced open-core model:
+
+- **Open Specifications & Runtimes:** The core binary formats, decoding engines, and embeddable player components are released under the **Apache-2.0** license to foster global web interoperability.
+- **Commercial Tooling & Infrastructure:** Cloud packaging backends, collaborative visual studios, and enterprise verification systems are developed and maintained as proprietary technology by Xue Studios LLC.
+
+---
+
+## Contact & Inquiries
+
+- **Official Platform:** [oim.media](https://oim.media)
+- **Corporate Portal:** [xuestudios.com](https://xuestudios.com)
+- **Technical Inquiries:** [contact@xuestudios.com](mailto:contact@xuestudios.com)
+- **Security Disclosures:** [support@oim.media](mailto:support@oim.media)

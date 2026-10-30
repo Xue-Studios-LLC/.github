@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient (Xue Studios Obsidian Void) -->
+    <linearGradient id="bg-obsidian" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1015"/>
+      <stop offset="100%" stop-color="#07080A"/>
+    </linearGradient>
+
+    <!-- Raycast Laser Glow Accent (#FF2E4D) -->
+    <radialGradient id="laser-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="rgba(255, 46, 77, 0.22)"/>
+      <stop offset="100%" stop-color="rgba(255, 46, 77, 0)"/>
+    </radialGradient>
+
+    <!-- Visor Glass Reflection (35 deg Raycast Beam) -->
+    <linearGradient id="visor-beam" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="28%" stop-color="#FF6B81" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#FF2E4D" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#141720" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Outer Helmet Rim Chrome -->
+    <linearGradient id="helmet-rim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#C4C8D4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4B5162" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Internal Visor Core Gradient -->
+    <linearGradient id="visor-inner" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#12151D"/>
+      <stop offset="100%" stop-color="#090A0E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bg-obsidian)"/>
+  <circle cx="256" cy="245" r="190" fill="url(#laser-glow)"/>
+
+  <!-- Subtle Precision Framing Grid -->
+  <rect x="36" y="36" width="440" height="440" rx="100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+  <!-- ============================================================== -->
+  <!-- THE QUANTUM VISOR (Geometric Astronaut Helmet Mark)            -->
+  <!-- ============================================================== -->
+  <g transform="translate(0, 5)">
+    <!-- 1. Outer Helmet Arch & Base Collar (Engineered Shield) -->
+    <!-- Continuous aerodynamic dome with subtle jaw notch -->
+    <path d="M 150 290 
+             C 135 250, 135 180, 185 130 
+             C 215 100, 297 100, 327 130 
+             C 377 180, 377 250, 362 290
+             C 350 325, 325 345, 290 355
+             L 222 355
+             C 187 345, 162 325, 150 290 Z" 
+          fill="none" 
+          stroke="url(#helmet-rim)" 
+          stroke-width="14" 
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+
+    <!-- 2. Lower Neck / Collar Interface Line -->
+    <path d="M 195 385 L 317 385" 
+          stroke="#FFFFFF" 
+          stroke-opacity="0.4" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <path d="M 225 408 L 287 408" 
+          stroke="#FF2E4D" 
+          stroke-width="5" 
+          stroke-linecap="round"/>
+
+    <!-- 3. The Panoramic Curved Visor (Dark Void Core) -->
+    <path d="M 168 250 
+             C 160 205, 175 160, 215 145 
+             C 235 138, 277 138, 297 145 
+             C 337 160, 352 205, 344 250 
+             C 336 295, 305 315, 256 315 
+             C 207 315, 176 295, 168 250 Z" 
+          fill="url(#visor-inner)" 
+          stroke="rgba(255,255,255,0.12)" 
+          stroke-width="4"/>
+
+    <!-- 4. The Visor Raycast Refraction (Diagonal Light Beam cutting across the glass) -->
+    <path d="M 182 245 
+             C 176 210, 188 175, 218 162 
+             C 235 155, 277 155, 294 162 
+             C 324 175, 336 210, 330 245 
+             C 323 282, 298 298, 256 298 
+             C 214 298, 189 282, 182 245 Z" 
+          fill="url(#visor-beam)" 
+          opacity="0.88"/>
+
+    <!-- 5. High-Specular Light Reflection Blade (WebGPU Precision Slice at -35 deg) -->
+    <path d="M 235 168 L 290 168 C 308 185, 316 212, 312 240 L 292 240 C 298 215, 285 190, 235 168 Z" 
+          fill="#FFFFFF" 
+          opacity="0.85"/>
+
+    <!-- 6. Beacon Origin Point / Singularity Point (Top Antenna/Sensor Node) -->
+    <circle cx="256" cy="92" r="6" fill="#FF2E4D"/>
+    <circle cx="256" cy="92" r="14" fill="none" stroke="#FF2E4D" stroke-opacity="0.4" stroke-width="2"/>
+  </g>
+</svg>

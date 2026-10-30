@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="OIM Media Social Banner">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="oim-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151619"/>
+      <stop offset="60%" stop-color="#0E0F12"/>
+      <stop offset="100%" stop-color="#08090A"/>
+    </linearGradient>
+
+    <!-- Warm Amber Atmosphere -->
+    <radialGradient id="oim-glow" cx="80%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="rgba(245, 158, 11, 0.15)"/>
+      <stop offset="100%" stop-color="rgba(245, 158, 11, 0)"/>
+    </radialGradient>
+    <radialGradient id="oim-blue" cx="20%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="rgba(59, 130, 246, 0.08)"/>
+      <stop offset="100%" stop-color="rgba(59, 130, 246, 0)"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="oim-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.025)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1500" height="500" fill="url(#oim-bg)"/>
+  <rect width="1500" height="500" fill="url(#oim-glow)"/>
+  <rect width="1500" height="500" fill="url(#oim-blue)"/>
+  <rect width="1500" height="500" fill="url(#oim-grid)"/>
+
+  <!-- Subtle Top & Bottom Architectural Edge Lines -->
+  <line x1="0" y1="1" x2="1500" y2="1" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+  <line x1="0" y1="499" x2="1500" y2="499" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+  <!-- Left / Center Content Block -->
+  <g transform="translate(140, 150)">
+    <!-- Kicker Tag -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="28" rx="14" fill="rgba(245, 158, 11, 0.08)" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1"/>
+      <circle cx="16" cy="14" r="4" fill="#F59E0B"/>
+      <text x="30" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="0.12em" fill="#F59E0B">OBJECT INTERACTIVE MEDIA</text>
+    </g>
+
+    <!-- Title -->
+    <text x="0" y="80" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="52" letter-spacing="-0.03em" fill="#FFFFFF">OIM MEDIA</text>
+
+    <!-- Tagline -->
+    <text x="0" y="125" font-family="'Inter', system-ui, sans-serif" font-weight="400" font-size="20" fill="#9CA3AF">A living standard for interactive, multilingual images &amp; video.</text>
+
+    <!-- Features / Highlights -->
+    <g transform="translate(0, 168)">
+      <!-- Pill 1: Single File -->
+      <rect x="0" y="0" width="180" height="34" rx="8" fill="#1E2024" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="90" y="22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#FFFFFF">ONE FILE · ALL LANGS</text>
+
+      <!-- Pill 2: Web Components -->
+      <rect x="195" y="0" width="165" height="34" rx="8" fill="#1E2024" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="277" y="22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#FFFFFF">&lt;OIM-PLAYER&gt; W3C</text>
+
+      <!-- Pill 3: ECDSA Proof -->
+      <rect x="375" y="0" width="170" height="34" rx="8" fill="#1E2024" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="460" y="22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#FFFFFF">ECDSA SIGNED PNG</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Canonical OIM Mark (3 solid layers rotated 15 deg) -->
+  <g transform="translate(1220, 250)">
+    <circle cx="0" cy="0" r="140" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="105" fill="none" stroke="rgba(255, 255, 255, 0.06)" stroke-dasharray="4 8" stroke-width="1"/>
+
+    <!-- OIM Glyph -->
+    <g fill="#FFFFFF" transform="scale(1.15) rotate(-75)">
+      <path fill-rule="evenodd" d="M-66.40 -75.10H66.40A35.00 35.00 0 0 1 101.40 -40.10V40.10A35.00 35.00 0 0 1 66.40 75.10H-66.40A35.00 35.00 0 0 1 -101.40 40.10V-40.10A35.00 35.00 0 0 1 -66.40 -75.10ZM-66.40 -65.10H66.40A25.00 25.00 0 0 1 91.40 -40.10V40.10A25.00 25.00 0 0 1 66.40 65.10H-66.40A25.00 25.00 0 0 1 -91.40 40.10V-40.10A25.00 25.00 0 0 1 -66.40 -65.10Z"/>
+      <path fill-rule="evenodd" d="M-55.40 -41.90H55.50A10.00 10.00 0 0 1 65.50 -31.90V31.90A10.00 10.00 0 0 1 55.50 41.90H-55.40A10.00 10.00 0 0 1 -65.40 31.90V-31.90A10.00 10.00 0 0 1 -55.40 -41.90ZM-50.40 -30.60H37.00A15.00 15.00 0 0 1 52.00 -15.60V26.90A15.00 15.00 0 0 1 37.00 41.90H-50.40A15.00 15.00 0 0 1 -65.40 26.90V-15.60A15.00 15.00 0 0 1 -50.40 -30.60Z"/>
+      <path fill-rule="evenodd" d="M-55.40 -20.60H32.00A10.00 10.00 0 0 1 42.00 -10.60V31.90A10.00 10.00 0 0 1 32.00 41.90H-55.40A10.00 10.00 0 0 1 -65.40 31.90V-10.60A10.00 10.00 0 0 1 -55.40 -20.60ZM-50.40 -10.00H12.90A15.00 15.00 0 0 1 27.90 5.00V26.90A15.00 15.00 0 0 1 12.90 41.90H-50.40A15.00 15.00 0 0 1 -65.40 26.90V5.00A15.00 15.00 0 0 1 -50.40 -10.00Z"/>
+      <path fill-rule="evenodd" d="M-55.40 0.00H7.90A10.00 10.00 0 0 1 17.90 10.00V31.90A10.00 10.00 0 0 1 7.90 41.90H-55.40A10.00 10.00 0 0 1 -65.40 31.90V10.00A10.00 10.00 0 0 1 -55.40 0.00Z"/>
+    </g>
+  </g>
+
+  <!-- Technical Footer URL -->
+  <text x="1450" y="460" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="rgba(255, 255, 255, 0.25)" letter-spacing="0.1em">OPEN STANDARD · OIM.MEDIA</text>
+</svg>
