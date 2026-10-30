@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/xue-studios-banner.png" alt="Xue Studios LLC Social Banner" width="100%" />
+  <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
+    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-architecture-specimen.png" alt="Object Interactive Media Architecture Specimen" width="680" />
+  </a>
 </p>
 
 # Xue Studios LLC
@@ -12,7 +14,7 @@ We are the creators and maintainers of **Object Interactive Media (OIM)**, an op
 
 ## Object Interactive Media (OIM Standard)
 
-Digital media has historically faced a rigid dichotomy: static raster images (PNG, JPEG, WebP) are portable but lack interactivity, text accessibility, and localization; whereas interactive web applications require complex bundles, external stylesheets, and custom hosting.
+Digital media has historically faced a rigid dichotomy: static raster images (PNG, JPEG, WebP) are portable but lack interactivity, accessibility, and localization; whereas interactive web applications require complex bundles, external stylesheets, and custom hosting.
 
 The **OIM Standard** bridges this divide by embedding interactive DOM metadata directly inside standard PNG files:
 
@@ -22,10 +24,10 @@ The **OIM Standard** bridges this divide by embedding interactive DOM metadata d
 
 <p align="center">
   <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/interactive_specimen.oim.png" alt="Object Interactive Media Specimen (.oim.png)" width="85%" />
+    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-runtime-translation.png" alt="Native Runtime Translation Specimen" width="680" />
   </a>
   <br />
-  <sub><b>Figure 1.0:</b> Canonical Object Interactive Media container (<code>.oim.png</code>). Renders as high-fidelity PNG on GitHub; unlocks real-time multilingual DOM layers when mounted via <code>&lt;oim-player&gt;</code>. Select image to open live ecosystem.</sub>
+  <sub><b>Figure 1.0:</b> Native runtime translation and dynamic DOM layering in OIM. Zero network latency per language switch. Select image to open live ecosystem.</sub>
 </p>
 
 ---
@@ -41,9 +43,9 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 ```html
 <!-- Declarative embed with automated aspect ratio preservation -->
 <oim-player 
-  src="https://oim.media/object_view.oim.png" 
-  ratio="16/9"
-  lang="es">
+  src="https://oim.media/oim-architecture-specimen.png" 
+  ratio="1.91/1"
+  lang="en">
 </oim-player>
 ```
 
@@ -52,7 +54,7 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 In environments where client-side JavaScript execution is restricted by security sanitizers, OIM leverages standard image syntax with a direct hyperlink to the live viewer:
 
 ```markdown
-[![Interactive Visual Architecture](https://oim.media/object_view.oim.png)](https://oim.media)
+[![Interactive Visual Architecture](https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/oim-architecture-specimen.png)](https://oim.media)
 ```
 
 This guarantees 100% visual uptime across every distribution channel while retaining instant access to interactive functionality.
