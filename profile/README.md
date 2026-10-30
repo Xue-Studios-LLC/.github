@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/xue-studios-header.png" alt="Xue Studios LLC" width="680" />
+  <img src="https://embed.oim.media/4CUbwN0A49hb.oim.png" alt="Xue Studios LLC" width="680" />
 </p>
 
 # Xue Studios LLC
@@ -22,10 +22,10 @@ The **OIM Standard** bridges this divide by embedding interactive DOM metadata d
 
 <p align="center">
   <a href="https://oim.media" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/hero-multilingual.oim.png" alt="Hero Multilingual Specimen (.oim.png)" width="680" />
+    <img src="https://embed.oim.media/G8jBVj7I8zi8.oim.png" alt="Hero Landing Specimen — La luz no necesita traducción" width="680" />
   </a>
   <br />
-  <sub><b>Figure 1.0:</b> Canonical multilingual hero specimen (<code>hero-multilingual.oim.png</code>). Encapsulates 7 languages (ES, EN, PT, FR, DE, IT, JA) and 19 interactive slots with zero-bandwidth runtime DOM switching. Select image to open live in player.</sub>
+  <sub><b>Figure 1.0:</b> Canonical multilingual hero container (<code>G8jBVj7I8zi8.oim.png</code>). Encapsulates 10 languages (ES, EN, PT, FR, DE, IT, RU, JA, ZH, KO) and 5 interactive layers with zero-bandwidth runtime DOM switching. Select image to open live in player.</sub>
 </p>
 
 ---
@@ -41,9 +41,9 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 ```html
 <!-- Declarative embed with automated aspect ratio preservation -->
 <oim-player 
-  src="https://oim.media/flyer_audifonos.oim.png" 
+  src="https://embed.oim.media/G8jBVj7I8zi8.oim.png" 
   ratio="16/9"
-  lang="en">
+  lang="es">
 </oim-player>
 ```
 
@@ -52,24 +52,31 @@ When loaded in web environments supporting Custom Elements, Markdown parsers ren
 In environments where client-side JavaScript execution is restricted by security sanitizers, OIM leverages standard image syntax with a direct hyperlink to the live viewer:
 
 ```markdown
-[![Interactive Visual Architecture](https://raw.githubusercontent.com/Xue-Studios-LLC/.github/main/brand-assets/hero-multilingual.oim.png)](https://oim.media)
+[![Interactive Visual Architecture](https://embed.oim.media/G8jBVj7I8zi8.oim.png)](https://oim.media)
 ```
 
 This guarantees 100% visual uptime across every distribution channel while retaining instant access to interactive functionality.
 
 ---
 
-## Binary Verification & Dynamic Data Integrity
+## Binary Verification & Live Dynamic Delivery
 
-Every `.oim.png` artifact is verified against RFC-2083 PNG specifications and the OIM binary schema:
+Both visual artifacts are served directly by the OIM delivery infrastructure (`embed.oim.media`) with full dynamic payloads verified:
 
 ```
-Payload Analysis: hero-multilingual.oim.png
-Chunk Identifier: zTXt (Keyword: OIM_Data, Compression: Deflate)
-Decompressed Size: 370,636 bytes (Valid JSON)
-Languages Declared: ["es", "en", "pt", "fr", "de", "it", "ja"]
-Interactive Slots: 19 structured vector & text slots
-Security Status: ECDSA P-256 signature chain validated
+Artifact: https://embed.oim.media/4CUbwN0A49hb.oim.png
+- Purpose: Xue Studios LLC Institutional Brand Card
+- Chunk Type: zTXt (Keyword: OIM_Data, Deflate Stream)
+- Languages: ["en", "es"]
+- Interactive Slots: 6 structured layers
+- Content Delivery: 200 OK (image/png, 615 KB)
+
+Artifact: https://embed.oim.media/G8jBVj7I8zi8.oim.png
+- Purpose: Hero Landing Specimen (La luz no necesita traducción)
+- Chunk Type: zTXt (Keyword: OIM_Data, Deflate Stream)
+- Languages: ["es", "en", "pt", "fr", "de", "it", "ru", "ja", "zh", "ko"] (10 languages)
+- Interactive Slots: 5 structured layers
+- Content Delivery: 200 OK (image/png, 869 KB)
 ```
 
 ---
